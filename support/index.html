@@ -6,12 +6,44 @@
 <title>Glance Slots — Support</title>
 <meta name="description" content="How to add Glance Slots to your watch face, Smart Stack, Lock Screen, Home Screen, StandBy and Control Center, plus answers to common questions.">
 <link rel="icon" href="../assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 15h3M13 15h3"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 6h16M4 12h11M4 18h14"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M21.5 10v4"/><rect x="5" y="10" width="7" height="4" rx="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-event" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15.5l2 2 4-4"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4.2 0 7-2.9 7-6.8 0-3-1.6-5.2-3.2-7.4-.9 2.4-2 3.6-3.3 3.9.3-3-.7-6.1-3.2-8.7-.8 4.2-4.3 6.6-4.3 11.2C5 19 8 22 12 22z"/></symbol>
+  <symbol id="i-pie" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9V3z"/><path d="M14.5 2.6A9 9 0 0 1 21.4 9.5H14.5V2.6z"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M21 3v6h-6"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 21h16M5 21v-6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6"/><path d="M5 17c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0"/><path d="M12 13V9"/><path d="M12 6.5c-.9 0-1.5-.7-1.5-1.5S12 2 12 2s1.5 2.2 1.5 3-.6 1.5-1.5 1.5z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5-5-7.5 7.5"/></symbol>
+  <symbol id="i-watch" viewBox="0 0 24 24"><rect x="7" y="6.5" width="10" height="11" rx="3"/><path d="M9 6.5V3h6v3.5M9 17.5V21h6v-3.5"/><path d="M12 10v3h2"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5L12 21l9-4.5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/><circle cx="12" cy="16" r="1.2" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-island" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3.5"/><rect x="9" y="4.5" width="6" height="2.2" rx="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M11 4l1.6 4.4L17 10l-4.4 1.6L11 16l-1.6-4.4L5 10l4.4-1.6L11 4z"/><path d="M18.5 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5-12-7.5z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
 <header class="top"><div class="wrap">
-  <a href="../"><img src="../assets/icon.png" alt="" width="34" height="34"></a><a class="brand" href="../">Glance Slots</a>
-  <nav><a href="./">Support</a><a href="../privacy/">Privacy</a></nav>
+  <a href="../"><img src="../assets/icon.png" alt="" width="32" height="32"></a><a class="brand" href="../">Glance Slots</a>
+  <nav><a href="../">Home</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a class="cta" href="../#appstore-link">Get the app</a></nav>
 </div></header>
 <main><article class="doc">
   <h1>Support</h1>
@@ -19,28 +51,28 @@
   <p>Email <a href="mailto:support@glanceslots.com">support@glanceslots.com</a>. Replies within two business days. Include your iOS/watchOS versions and, if it helps, an export of your slots (More › Export slots) — it contains only what you typed.</p>
 
   <h2>How to add Glance Slots to your surfaces</h2>
-  <details><summary>Apple Watch complication</summary><p>Touch and hold your watch face, tap Edit, swipe to Complications, tap a position, scroll to Glance Slots and pick the slot. On watchOS 26 each complication can show a different slot.</p></details>
-  <details><summary>Smart Stack</summary><p>Turn the Digital Crown from the watch face, tap +, and add Glance Slots. Countdowns appear on their own during their final week.</p></details>
-  <details><summary>iPhone Lock Screen</summary><p>Touch and hold the Lock Screen, tap Customize, tap the widget area, choose Glance Slots.</p></details>
-  <details><summary>Home Screen and StandBy</summary><p>Touch and hold the Home Screen, tap Edit › Add Widget, search Glance Slots. In StandBy, touch and hold a widget stack to add one. Turn on “Black background” in the slot for StandBy.</p></details>
-  <details><summary>Streaks, progress and one-tap logging</summary><p>Add a “Streak” or “Progress” slot. Log a day or add one from the button on the Home Screen widget, the “+1” control in Control Center or on the Action button (pick the slot when you add the control), the Dynamic Island when the slot is pinned, or the “Log Streak Today” and “Add to Slot Value” Shortcuts actions. A streak stays alive if yesterday is logged, so you have all day to keep it.</p></details>
-  <details><summary>Rotations, birthdays, and photos</summary><p>“Rotation”: enter the labels of your cycle (Paper, General, Garden or Day, Day, Night, Night, Off, Off, Off), whether each lasts a day or a week, and the date the first label starts. “Next birthday”: allow Contacts access once; the slot shows the days until the next birthday and the name. “Photo”: pick one photo; it fills the Home Screen and StandBy widget, complications show the caption.</p></details>
-  <details><summary>A number from a web page or API</summary><p>Add a “Web value” slot with the HTTPS address. For JSON, enter a key path such as data.amount or items[0].price; for any other page, a regular expression whose first group is shown. Tap “Fetch now” to check. Widgets refresh at the interval you choose; the “Refresh Slot” Shortcuts action forces it.</p></details>
-  <details><summary>Pin any slot to the Dynamic Island</summary><p>Open the slot and tap “Pin to Dynamic Island”. It stays on the Lock Screen, in StandBy and in the Dynamic Island until you unpin it; countdowns end on their own. From Shortcuts, use “Pin Slot to Dynamic Island” and “Unpin Slot”.</p></details>
-  <details><summary>Claude or Codex usage on your wrist</summary><p>Add an “AI usage” slot (Provider: Claude or Codex). On your Mac, run <code>bash scripts/install-ai-usage.sh --statusline</code> from the Glance Slots project: it saves your usage windows to iCloud Drive every 10 minutes using only the files Claude Code and Codex write themselves. Then either build the “Update AI usage” Shortcut (Get File → Get Dictionary Value → Update AI Usage) or pass <code>--gist</code> and paste the printed feed URL into the slot so widgets refresh on their own. Full steps: docs/recipes/ai-usage-slot.md in the project.</p></details>
-  <details><summary>Control Center / Action button “+1”</summary><p>Open Control Center, tap +, add “Tally +1”, then long-press it to choose the slot. On Apple Watch Ultra, assign it to the Action button in Settings.</p></details>
+  <details><summary>Apple Watch complication <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Touch and hold your watch face, tap Edit, swipe to Complications, tap a position, scroll to Glance Slots and pick the slot. On watchOS 26 each complication can show a different slot.</p></details>
+  <details><summary>Smart Stack <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Turn the Digital Crown from the watch face, tap +, and add Glance Slots. Countdowns appear on their own during their final week.</p></details>
+  <details><summary>iPhone Lock Screen <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Touch and hold the Lock Screen, tap Customize, tap the widget area, choose Glance Slots.</p></details>
+  <details><summary>Home Screen and StandBy <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Touch and hold the Home Screen, tap Edit › Add Widget, search Glance Slots. In StandBy, touch and hold a widget stack to add one. Turn on “Black background” in the slot for StandBy.</p></details>
+  <details><summary>Streaks, progress and one-tap logging <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Add a “Streak” or “Progress” slot. Log a day or add one from the button on the Home Screen widget, the “+1” control in Control Center or on the Action button (pick the slot when you add the control), the Dynamic Island when the slot is pinned, or the “Log Streak Today” and “Add to Slot Value” Shortcuts actions. A streak stays alive if yesterday is logged, so you have all day to keep it.</p></details>
+  <details><summary>Rotations, birthdays, and photos <svg class="icon"><use href="#i-chevron"/></svg></summary><p>“Rotation”: enter the labels of your cycle (Paper, General, Garden or Day, Day, Night, Night, Off, Off, Off), whether each lasts a day or a week, and the date the first label starts. “Next birthday”: allow Contacts access once; the slot shows the days until the next birthday and the name. “Photo”: pick one photo; it fills the Home Screen and StandBy widget, complications show the caption.</p></details>
+  <details><summary>A number from a web page or API <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Add a “Web value” slot with the HTTPS address. For JSON, enter a key path such as data.amount or items[0].price; for any other page, a regular expression whose first group is shown. Tap “Fetch now” to check. Widgets refresh at the interval you choose; the “Refresh Slot” Shortcuts action forces it.</p></details>
+  <details><summary>Pin any slot to the Dynamic Island <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Open the slot and tap “Pin to Dynamic Island”. It stays on the Lock Screen, in StandBy and in the Dynamic Island until you unpin it; countdowns end on their own. From Shortcuts, use “Pin Slot to Dynamic Island” and “Unpin Slot”.</p></details>
+  <details><summary>Claude or Codex usage on your wrist <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Add an “AI usage” slot (Provider: Claude or Codex). On your Mac, run <code>bash scripts/install-ai-usage.sh --statusline</code> from the Glance Slots project: it saves your usage windows to iCloud Drive every 10 minutes using only the files Claude Code and Codex write themselves. Then either build the “Update AI usage” Shortcut (Get File → Get Dictionary Value → Update AI Usage) or pass <code>--gist</code> and paste the printed feed URL into the slot so widgets refresh on their own. Full steps: docs/recipes/ai-usage-slot.md in the project.</p></details>
+  <details><summary>Control Center / Action button “+1” <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Open Control Center, tap +, add “Tally +1”, then long-press it to choose the slot. On Apple Watch Ultra, assign it to the Action button in Settings.</p></details>
 
   <h2>Frequently asked</h2>
-  <details><summary>My Watch battery disappeared from the Lock Screen Batteries widget after iOS 26</summary><p>Apple’s Batteries widget now prefers AirPods when they are nearby. Edit the Lock Screen, tap the Batteries widget, turn off “Automatic”, and choose Apple Watch — or add a Glance Slots battery slot, which always shows both devices.</p></details>
-  <details><summary>The battery slot shows a dash</summary><p>Open the app on the other device once so it can report its level. Apple reports paired-device levels in 5% steps. AirPods have no public battery API, so they are not supported.</p></details>
-  <details><summary>The countdown number looks wrong</summary><p>Countdowns count whole calendar days and flip at midnight in your current time zone. Turn on “Include time” for hours and minutes near the date.</p></details>
-  <details><summary>A widget is blank or stale</summary><p>Open the app once; every save refreshes all widgets. If a widget stays blank after that, remove and re-add it.</p></details>
-  <details><summary>Restore my purchase</summary><p>More › Restore purchase. Family Sharing is supported.</p></details>
-  <details><summary>Shortcuts actions</summary><p>“Set Slot Value”, “Add to Slot Value”, “Get Slot Value” and “Tally +1” appear in the Shortcuts app under Glance Slots.</p></details>
+  <details><summary>My Watch battery disappeared from the Lock Screen Batteries widget after iOS 26 <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Apple’s Batteries widget now prefers AirPods when they are nearby. Edit the Lock Screen, tap the Batteries widget, turn off “Automatic”, and choose Apple Watch — or add a Glance Slots battery slot, which always shows both devices.</p></details>
+  <details><summary>The battery slot shows a dash <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Open the app on the other device once so it can report its level. Apple reports paired-device levels in 5% steps. AirPods have no public battery API, so they are not supported.</p></details>
+  <details><summary>The countdown number looks wrong <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Countdowns count whole calendar days and flip at midnight in your current time zone. Turn on “Include time” for hours and minutes near the date.</p></details>
+  <details><summary>A widget is blank or stale <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Open the app once; every save refreshes all widgets. If a widget stays blank after that, remove and re-add it.</p></details>
+  <details><summary>Restore my purchase <svg class="icon"><use href="#i-chevron"/></svg></summary><p>More › Restore purchase. Family Sharing is supported.</p></details>
+  <details><summary>Shortcuts actions <svg class="icon"><use href="#i-chevron"/></svg></summary><p>“Set Slot Value”, “Add to Slot Value”, “Get Slot Value” and “Tally +1” appear in the Shortcuts app under Glance Slots.</p></details>
 
   <h2>Privacy</h2>
   <p>Nothing is collected. See the <a href="../privacy/">privacy policy</a>.</p>
 </article></main>
-<footer><div class="wrap"><span>© 2026 Glance Slots</span><nav><a href="../">Home</a><a href="../privacy/">Privacy</a><a href="https://x.com/glanceslots" rel="me">X</a><a href="https://instagram.com/glanceslots" rel="me">Instagram</a></nav></div></footer>
+<footer><div class="wrap"><span>© 2026 Glance Slots</span><nav><a href="../">Home</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="mailto:support@glanceslots.com"><svg class="icon"><use href="#i-mail"/></svg>Email</a><a href="https://x.com/glanceslots" rel="me" aria-label="X"><svg class="icon"><use href="#i-x"/></svg></a><a href="https://instagram.com/glanceslots" rel="me" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a></nav></div></footer>
 </body>
 </html>
