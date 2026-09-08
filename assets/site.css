@@ -68,6 +68,12 @@ section p.sub { color: var(--muted); font-size: 17px; margin: 0; }
 .card h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
 .card p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.55; }
 
+/* style gallery: three wide images of the real widget looks */
+.styles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+.styles figure { margin: 0; }
+.styles img { width: 100%; border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
+.styles figcaption { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+
 /* gallery */
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; align-items: end; }
 .gallery figure { margin: 0; text-align: center; }
