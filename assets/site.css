@@ -1,3 +1,6 @@
+/* Inter, served from this site (SIL Open Font License 1.1, see assets/fonts/OFL.txt). No third-party font host. */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400 800; font-display: swap; src: url("fonts/inter-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400 800; font-display: swap; src: url("fonts/inter-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root {
   --bg: #0a0c12; --bg-2: #0f1220; --card: #141829; --card-2: #181d31; --line: #232941; --line-2: #2f3652;
   --text: #f1f3fa; --muted: #98a2bf; --dim: #6b7590;
@@ -111,6 +114,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
 footer nav { margin-left: auto; display: flex; gap: 14px; align-items: center; }
 footer nav a { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; } footer nav a:hover { color: var(--text); text-decoration: none; }
 footer .icon { width: 18px; height: 18px; }
+footer .legal { flex-basis: 100%; margin: 0; color: var(--dim); font-size: 12.5px; }
 
 /* documents (support, privacy) */
 article.doc { max-width: 720px; padding: 56px 24px 88px; margin: 0 auto; }

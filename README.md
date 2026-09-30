@@ -1,6 +1,6 @@
 # Glance Slots website (static)
 
-Landing page, privacy policy and support page for glanceslots.com. Plain HTML + one stylesheet, no JavaScript, no analytics, no cookies. Assets are downscaled copies of the App Store screenshots and the marketing video.
+Landing page, privacy policy and support page for glanceslots.com. Plain HTML + one stylesheet, no JavaScript, no analytics, no cookies. Assets are downscaled copies of the App Store screenshots. There is no video (dropped 2026-09-30, Decision 024). Inter is served from `assets/fonts/` (SIL OFL 1.1, licence file alongside), so the pages make no third-party requests.
 
 | Path | URL |
 |---|---|
