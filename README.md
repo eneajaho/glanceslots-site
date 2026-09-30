@@ -24,7 +24,7 @@ Alternative: Cloudflare Pages (connect the repo, build command none, output dire
 
 ## Changing the domain or e-mail
 
-Everything assumes `glanceslots.com` and `support@glanceslots.com`. To change:
+Everything assumes `glanceslots.com` and `glanceslots@gmail.com`. To change:
 
 ```sh
 grep -rl "glanceslots.com" marketing/ apps/glanceable/docs | xargs sed -i '' 's/glanceslots\.app/NEWDOMAIN/g'
